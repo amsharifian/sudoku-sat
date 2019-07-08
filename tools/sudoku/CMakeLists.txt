@@ -3,8 +3,8 @@ cmake_minimum_required(VERSION 3.8 FATAL_ERROR)
 set(exename sudoku-sat)
 
 add_executable(${exename} main.cpp)
-target_link_libraries(${exename} sudoku )
 target_link_libraries(${exename} ${CMAKE_SOURCE_DIR}/lib/picosat/libpicosat.a)
+target_link_libraries(${exename} sudoku )
 
 
 

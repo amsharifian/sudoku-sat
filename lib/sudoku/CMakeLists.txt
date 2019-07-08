@@ -1,8 +1,7 @@
 add_library(sudoku sudoku_sat.cpp)
+target_link_libraries(sudoku ${CMAKE_SOURCE_DIR}/lib/picosat/libpicosat.a)
 
-add_library(sudoku-lib MODULE sudoku_sat.cpp)
-
-set_target_properties(sudoku sudoku-lib PROPERTIES
+set_target_properties(sudoku PROPERTIES
   CXX_STANDARD 17
   CXX_STANDARD_REQUIRED ON
   CXX_EXTENSIONS OFF
